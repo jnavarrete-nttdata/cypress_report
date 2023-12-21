@@ -4,15 +4,18 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout another repository
-        uses: actions/checkout@v3
-        with:
-          repository: jnavarrete-nttdata/base_frmk_cypress
-          ref: report
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-           force: true
-           branch: report  # Replace with the branch you want to push
-           repository: jnavarrete-nttdata/cypress_report  # Replace with the target repository
-           github_token: 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
+      - run: echo "Triggering Wokflow 2"
+      - name: Checkout
+        uses: actions/checkout@v2
+      #- name: Checkout another repository
+      #  uses: actions/checkout@v3
+      #  with:
+      #    repository: jnavarrete-nttdata/base_frmk_cypress
+      #    ref: report
+      #- name: Push changes
+      #  uses: ad-m/github-push-action@master
+      #  with:
+      #     force: true
+      #     branch: report  # Replace with the branch you want to push
+      #     repository: jnavarrete-nttdata/cypress_report  # Replace with the target repository
+      #     github_token: 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
